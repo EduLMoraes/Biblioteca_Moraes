@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos e Condições - Biblioteca Moraes</title>
+</head>
+<body>
+    <header>
+        <h1>Termos e Condições</h1>
+        <p>Última atualização: 02 de outubro de 2023</p>
+    </header>
+
+    <section>
+        <h2>Introdução</h2>
+        <p>Estes são os Termos e Condições de uso do site da Biblioteca Moraes (www.bibliotecamoraes.com.br). Ao acessar ou utilizar nossos serviços, você concorda em cumprir estes termos e condições. Leia com atenção.</p>
+    </section>
+
+    <section>
+        <h2>1. Uso do Site</h2>
+        <p>1.1. Você concorda em usar nosso site de forma legal e ética.</p>
+        <p>1.2. Você concorda em usar nosso site sem fins lucrativos.</p>
+        <p>1.3. Você concorda em usar nosso site com finalidade de estudo.</p>
+        <!-- Continue a adicionar o conteúdo da seção 1 -->
+    </section>
+
+    <section>
+        <h2>2. Consentimento</h2>
+        <p>2.1. Você como usuário tem ciência e consente que o site é meramente ilustrativo, portanto, as informações empresariais nele não são verdadeiras.</p>
+        <p>2.2. Você consente de que o site use seus dados fornecidos no cadastro de usuário servem para gerenciamento de permissões e de usuários.</p>
+        <p>2.3. Você consente de que o site contém apenas os livros inseridos pelo administrador do site.</p>
+        <p>2.4. Você consente de que informações como copyright, política de privacidade dentre outros, exceto do desenvolvedor, são apenas para compôr o site, portanto são fictícias.</p>
+    </section>
+
+    <section>
+        <h2>6. Condições Gerais</h2>
+        <p>6.1. Estes Termos e Condições podem ser atualizados a qualquer momento. Recomendamos verificar periodicamente para estar ciente de quaisquer alterações.</p>
+        <p>6.2. Se tiver alguma dúvida ou preocupação sobre esses Termos e Condições, entre em contato conosco pelo e-mail suporte@bibliotecamoraes.com.br.</p>
+        <!-- Continue a adicionar o conteúdo da seção 6 -->
+    </section>
+
+    <footer>
+        <p>Estes são os Termos e Condições de uso da Biblioteca Moraes. Última atualização: 02 de outubro de 2023</p>
+        <p>Rio Grande do Sul, 02 de outubro de 2023</p>
+        <p>Biblioteca Moraes LTDA</p>
+    </footer>
+</body>
+</html>

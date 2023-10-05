@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar-se - Biblioteca Moraes</title>
+    <link rel="stylesheet" href="/style/standard.css">
+    <link rel="stylesheet" href="/style/index.css">
+
+</head>
+<body>
+    <div class="container">
+        <h2>
+            Cadastro <br>
+            Biblioteca Moraes
+        </h2>
+        <form id="put-form-register">
+            <div class="form-item">
+                <label>
+                    <b>*</b>Nome:
+                </label>
+                <input name="name" id="name" type="text" required> 
+            </div>
+
+            <div class="form-item">
+                <label>
+                    <b>*</b>Sobrenome:
+                </label>
+                <input name="surname" id="surname" type="text" required> 
+            </div>
+
+            <div class="form-item">
+                <label>
+                    <b>*</b>Email:
+                </label>
+                <input name="email" id="email" type="email" required> 
+            </div>
+
+            <div class="form-item">
+                <label>
+                    <b>*</b>Senha:
+                </label>
+                <input name="password" id="password" type="password" class="password" required> 
+            </div>
+            <div class="form-item">
+                <label>
+                    <b>*</b>Confirme a senha:
+                </label>
+                <input name="confirm_password" id="confirm_password" type="password" class="password" required> 
+            </div>
+            <p>
+                <input type="checkbox" id="accordion" required/>
+                Eu li e concordo com a <a href="/policy">política de privacidade</a>
+            </p>
+            <p>
+                <input type="checkbox" id="accordion" required/>
+                Eu li e concordo com os <a href="/terms">termos e condições</a>
+            </p>
+            <div class="form-item">
+                <button type="submit" class="submit"><span>Adicionar</span></button>
+            </div>
+        </form>
+        <p>
+            <input type="checkbox" id="view_password" onclick="type_change()"/>
+            Visualizar senha
+        </p>
+       
+        <p>
+            Já possuí uma conta? <a href="/">Login</a>
+        </p>
+    </div>
+    <footer class="py-4 bg-light mt-auto">
+        <div class="container-fluid px-4">
+            <div class="d-flex align-items-center justify-content-between small">
+                <div class="text-muted">Copyright &copy; Biblioteca Moraes 2023</div>
+                <div class="text-muted">Desenvolvido por Eduardo L. Moraes</div>
+                <div>
+                    <a href="/policy">Pilítica de Privacidade</a>
+                    &middot;
+                    <a href="/terms">Termos &amp; Condições</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    function type_change(){
+
+        if(document.getElementById("password").type == "password"){
+            document.getElementById('password').type = "text";
+            document.getElementById('confirm_password').type = "text";
+        }else{
+            document.getElementById('password').type = "password";
+            document.getElementById('confirm_password').type = "password";
+        }
+    };
+</script>
+    <script src="/script/put_register.js" crossorigin="anonymous"></script>
+</html>

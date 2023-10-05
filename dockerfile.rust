@@ -1,0 +1,7 @@
+FROM rust:latest
+RUN apt-get update && apt-get install -y default-libmysqlclient-dev
+RUN rustup default nightly
+WORKDIR /biblioteca_moraes
+COPY . . 
+EXPOSE 8000
+CMD ["cargo", "run"]

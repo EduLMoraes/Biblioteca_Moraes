@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Biblioteca Moraes</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="/style/styles.css" rel="stylesheet" />
+        <link href="/style/home-admin.css" rel="stylesheet" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="#">Biblioteca Moraes</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="/exit">Sair</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Usuário:</div>
+                        {{name}} {{surname}}
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <div class="card-mb-4">
+                            <div class="mcr-books">
+                                <div class="mcr-header">
+                                    <h3>Adicionar Livro</h3>
+                                </div>
+                                <div class="mcr-body">
+                                    <form id="put-form">
+                                        <div class="form-item">
+                                            <label>
+                                                <b>*</b>Título:
+                                            </label>
+                                            <input name="title" id="title" type="text" required> 
+                                        </div>
+
+                                        <div class="form-item">
+                                            <label>
+                                                <b>*</b>Autor:
+                                            </label>
+                                            <input name="author" id="author" type="text" required> 
+                                        </div>
+
+                                        <div class="form-item">
+                                            <label>
+                                                <b>*</b>Editora:
+                                            </label>
+                                            <input name="pub_company" id="pub_company" type="text" required> 
+                                        </div>
+                                    
+                                        <div class="form-item">
+                                            <label>
+                                                <b>*</b>Categoria:
+                                            </label>
+                                            <select name="category" id="category" required>
+                                                <option value="Drama">Drama</option>
+                                                <option value="Romance">Romance</option>
+                                                <option value="Terror">Terror</option>
+                                                <option value="Misterio">Mistério</option>
+                                                <option value="Ficção Cientifica">Ficção Científica</option>
+                                                <option value="Ficção Brasileira">Ficção Brasileira</option>
+                                                <option value="Fantasia">Fantasia</option>
+                                                <option value="Aventura">Aventura</option>
+                                                <option value="Suspense">Suspense</option>
+                                                <option value="Literatura Clássica">Literatura Clássica</option>
+                                                <option value="Biografia">Biografia</option>
+                                                <option value="Autobiografia">Autobiografia</option>
+                                                <option value="Memórias">Memórias</option>
+                                                <option value="História">História</option>
+                                                <option value="Ciência">Ciência</option>
+                                                <option value="Tecnologia">Tecnologia</option>
+                                                <option value="Política">Política</option>
+                                                <option value="Filosofia">Filosofia</option>
+                                                <option value="Infantil">Infantil</option>
+                                                <option value="Livros para Jovens Adultos">Livros para Jovens Adultos (YA)</option>
+                                                <option value="Livros Ilustrados">Livros Ilustrados</option>
+                                                <option value="Poesia Clássica">Poesia Clássica</option>
+                                                <option value="Poesia Contemporânea">Poesia Contemporânea</option>
+                                                <option value="Haicais">Haicais</option>
+                                                <option value="Poesia Épica">Poesia Épica</option>
+                                                <option value="Religião e Espiritualidade">Religião e Espiritualidade</option>
+                                                <option value="História Mundial">História Mundial</option>
+                                                <option value="História Regional">História Regional</option>
+                                                <option value="Cultura Pop">Cultura Pop</option>
+                                                <option value="Arte e Música">Arte e Música</option>
+                                                <option value="Astronomia">Astronomia</option>
+                                                <option value="Biologia">Biologia</option>
+                                                <option value="Química">Química</option>
+                                                <option value="Física">Física</option>
+                                                <option value="Meio Ambiente">Meio Ambiente</option>
+                                                <option value="Ciências da Terra">Ciências da Terra</option>
+                                                <option value="Autoajuda e Desenvolvimento Pessoal">Autoajuda e Desenvolvimento Pessoal</option>
+                                                <option value="Empreendedorismo">Empreendedorismo</option>
+                                                <option value="Finanças Pessoais">Finanças Pessoais</option>
+                                                <option value="Economia">Economia</option>
+                                                <option value="Liderança">Liderança</option>
+                                                <option value="Dicionários">Dicionários</option>
+                                                <option value="Enciclopédias">Enciclopédias</option>
+                                                <option value="Guias de Estudo">Guias de Estudo</option>
+                                                <option value="Manuais Técnicos">Manuais Técnicos</option>
+                                                <option value="Ficção Histórica">Ficção Histórica</option>
+                                                <option value="Suspense e Investigação">Suspense e Investigação</option>
+                                                <option value="Viagem e Aventura">Viagem e Aventura</option>
+                                                <option value="Saúde">Saúde</option>
+                                                <option value="Culinária e Gastronomia">Culinária e Gastronomia</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-item">
+                                            <label>
+                                                <b>*</b>Edição:
+                                            </label>
+                                            <input name="edition" id="edition" type="number" required> 
+                                        </div>
+                                        
+                                        <div class="form-item">
+                                            <label>
+                                                <b>*</b>Ano de Lançamento:
+                                            </label>
+                                            <input name="publishing" id="publishing" type="number" required> 
+                                        </div>
+                                        
+                                        <div class="form-item">
+                                            <label>
+                                                <b>*</b>Descrição (máx. 255):
+                                            </label>
+                                            <textarea name="description" id="description" type="text" rows="4" cols="25" maxlength="255" required> </textarea>
+                                        </div>
+                                        
+                                        <div class="form-item">
+                                            <button type="submit" class="submit" formaction=""><span>Adicionar</span></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Tabela de Livros
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                      <tr>
+                                        <th>ID</th>
+                                        <th>Editora</th>
+                                        <th>Autor</th>
+                                        <th>Título</th>
+                                        <th>Categoria</th>
+                                        <th>Edição</th>
+                                        <th>Lançamento</th>
+                                        <th>Descrição</th>
+                                        <th>Quantidade disponível</th>
+                                        <th>Opções</th>
+                                      </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                          <th>ID</th>
+                                          <th>Editora</th>
+                                          <th>Autor</th>
+                                          <th>Título</th>
+                                          <th>Categoria</th>
+                                          <th>Edição</th>
+                                          <th>Lançamento</th>
+                                          <th>Descrição</th>
+                                          <th>Quantidade disponível</th>
+                                          <th>Opções</th>
+                                        </tr>
+                                      </tfoot>
+                                    <tbody>
+                                        {% for book in books %}
+                                            <tr>
+                                                <td>{{ book.id }}</td>
+                                                <td>{{ book.publisher }}</td>
+                                                <td>{{ book.author }}</td>
+                                                <td>{{ book.title }}</td>
+                                                <td>{{ book.category }}</td>
+                                                <td>{{ book.edition }}</td>
+                                                <td>{{ book.date }}</td>
+                                                <td>{{ book.description }}</td>
+                                                <td>{{ book.qnt }}</td>
+                                                <td class="options">
+                                                    <button class="edit-button" data-book="{{ book |to_json| escape}}"><i class="bi bi-pencil-fill"></i></button>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Biblioteca Moraes 2023</div>
+                            <div class="text-muted">Desenvolvido por Eduardo L. Moraes</div>
+                            <div>
+                                <a href="/policy">Pilítica de Privacidade</a>
+                                &middot;
+                                <a href="/terms">Termos &amp; Condições</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="/script/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="/script/datatables-simple-demo.js"></script>
+        <script src="/script/put_book.js" crossorigin="anonymous"></script>
+
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Biblioteca Moraes</title>
+    <link rel="stylesheet" href="/style/standard.css">
+    <link rel="stylesheet" href="/style/index.css">
+</head>
+<body>
+    <div class="container">
+        <h2>
+            Login <br>
+            Biblioteca Moraes
+        </h2>
+        <form action="/login" method="POST">
+            <div class="input">
+                E-mail:
+                <input type="text" name="email" placeholder="exemplo@exemplo.com" required><br>
+                
+                Senha:
+                <input type="password" id="password" name="password" placeholder="******" required><br>
+                <p>
+                    <input type="checkbox" id="view_password" onclick="type_change()"/>
+                    Visualizar senha
+                </p>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Não tem uma conta? <a href="/register">Cadastre-se</a></p>
+    </div>
+
+</body>
+<script>
+    function type_change(){
+
+        if(document.getElementById("password").type == "password"){
+            document.getElementById('password').type = "text";
+        }else{
+            document.getElementById('password').type = "password";
+        }
+    };
+</script>
+</html>

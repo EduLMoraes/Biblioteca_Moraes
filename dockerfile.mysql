@@ -1,0 +1,4 @@
+FROM mysql
+ENV MYSQL_ROOT_PASSWORD='abc'
+COPY src/modules/db/database.sql /docker-entrypoint-initdb.d/ 
+RUN chmod 0444 /docker-entrypoint-initdb.d/database.sql

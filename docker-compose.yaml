@@ -1,0 +1,31 @@
+version: '3.0'
+services:
+  app-db:
+    build:
+      context: .
+      dockerfile: dockerfile.mysql
+    volumes:
+      - app-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: abc
+      MYSQL_USER: automato
+      MYSQL_PASSWORD: 0178
+    container_name: DataBase-MySQL
+    # ports:
+    #   - "3307:3306"
+
+  app-rust:
+    build:
+      context: .
+      dockerfile: dockerfile.rust
+    ports:
+      - "8080:8000"
+    depends_on:
+      - app-db
+    environment:
+      DOCKERIZE_VERSION: v0.6.1
+    container_name: App-Rust
+
+
+volumes:
+  app-data:
