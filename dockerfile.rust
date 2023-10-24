@@ -4,4 +4,4 @@ RUN rustup default nightly
 WORKDIR /biblioteca_moraes
 COPY . . 
 EXPOSE 8000
-CMD ["cargo", "run"]
+CMD ["cargo", "run", "--verbose"]
